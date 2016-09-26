@@ -28,7 +28,13 @@ module.exports = {
         query: {
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+      { test: /\.css$/, exclude: /\.useable\.css$/, loader: "style!css" },
+      { test: /\.useable\.css$/, loader: "style/useable!css" },
+      {test: /\.eot/,loader : 'file?prefix=font/'},
+      {test: /\.woff/,loader : 'file?prefix=font/&limit=10000&mimetype=application/font-woff'},
+      {test: /\.ttf/, loader : 'file?prefix=font/'}, 
+      {test: /\.svg/, loader : 'file?prefix=font/'},
     ]
   },
   devServer: {
