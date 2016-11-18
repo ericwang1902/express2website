@@ -1,13 +1,11 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <register></register>
+    <login></login>
   </div>
 </template>
 
 <script>
-import register from './components/register.vue'
+import login from './components/login.vue'
 
 export default {
   data () {
@@ -16,7 +14,7 @@ export default {
     }
   },
   components:{
-    register
+    login
   }
 }
 </script>

@@ -1,7 +1,38 @@
 <template>
-  <div>
-    <h1>{{ msg }}</h1>
-  </div>
+    <div style="height:100%">
+       
+     <el-row :gutter="20" style="margin-top: 150px;">
+        <el-col :span="12" :offset="6">
+            <el-card class="box-card">
+                  <div slot="header" class="clearfix">
+                        <span style="line-height: 36px;">用户登录</span>
+                    </div>
+                    <el-row>
+                        <el-col :span="6">用户名</el-col>
+                        <el-col :span="18">
+                            <div class="grid-content bg-purple">
+                                <el-input  placeholder="请输入用户名" v-model="input"></el-input>
+                            </div>
+                        </el-col>
+                    </el-row>
+                    <el-row>
+                        <el-col :span="6">密码</el-col>
+                        <el-col :span="18">
+                            <div class="grid-content bg-purple">
+                                <el-input  placeholder="请输入手机号" v-model="input"></el-input>
+                            </div>
+                        </el-col>
+                    </el-row>
+                    <el-row :gutter="20" :justify="end">
+                         <el-col :span="12" :offset="6">
+                            <el-button type="primary">登录</el-button>
+                            <el-button type="text">注册</el-button>
+                         </el-col>
+                    </el-row>
+            </el-card>
+        </el-col>
+    </el-row>
+ </div>
 </template>
 
 <script>
@@ -17,5 +48,8 @@ export default {
 <style>
 body {
   font-family: Helvetica, sans-serif;
+}
+.el-row{
+    margin-bottom:20px;
 }
 </style>
