@@ -2,6 +2,11 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.js'
+        }
+    },//需要加，详细解释：https://segmentfault.com/q/1010000007099099?_ea=1236628
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),

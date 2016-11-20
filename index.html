@@ -5,7 +5,11 @@
     <title>express2website</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <transition :name="fade">
+      <router-view></router-view>
+      </transition>
+    </div>
     <script src="dist/build.js"></script>
   </body>
 </html>

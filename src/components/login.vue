@@ -11,7 +11,7 @@
                         <el-col :span="6">用户名</el-col>
                         <el-col :span="18">
                             <div class="grid-content bg-purple">
-                                <el-input  placeholder="请输入用户名" v-model="input"></el-input>
+                                <el-input  placeholder="请输入用户名" ></el-input>
                             </div>
                         </el-col>
                     </el-row>
@@ -19,14 +19,14 @@
                         <el-col :span="6">密码</el-col>
                         <el-col :span="18">
                             <div class="grid-content bg-purple">
-                                <el-input  placeholder="请输入手机号" v-model="input"></el-input>
+                                <el-input  placeholder="请输入手机号" ></el-input>
                             </div>
                         </el-col>
                     </el-row>
-                    <el-row :gutter="20" :justify="end">
+                    <el-row :gutter="20" >
                          <el-col :span="12" :offset="6">
                             <el-button type="primary">登录</el-button>
-                            <el-button type="text">注册</el-button>
+                             <el-button type="text" native-type="button" @click.native="gotoregister">注册</el-button>
                          </el-col>
                     </el-row>
             </el-card>
@@ -41,7 +41,13 @@ export default {
     return {
       msg: 'Hello Vue 4.0!'
     }
-  }
+  },
+    methods:{
+      gotoregister:function () {
+        this.$router.push('/register')
+
+      }
+    }
 }
 </script>
 
