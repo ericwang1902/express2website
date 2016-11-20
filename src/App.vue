@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <login></login>
+    <console></console>
   </div>
 </template>
 
 <script>
 import login from './components/login.vue'
+import console from './layouts/console.vue'
 
 export default {
   data () {
@@ -14,7 +16,8 @@ export default {
     }
   },
   components:{
-    login
+    login,
+    console
   }
 }
 </script>
