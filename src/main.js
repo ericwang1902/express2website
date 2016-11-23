@@ -8,10 +8,12 @@ Vue.use(VueRouter)
 
 import Login from './components/login.vue'
 import Register from './components/register.vue'
+import Console from './layouts/console.vue'
 
 const routes =[
     {path:'/',component:Login},//路由，进入系统就跳到登录界面
-    {path:'/register',component:Register}
+    {path:'/register',component:Register},
+    {path:'/console',component:Console}
 ]
 
 const router = new VueRouter({
